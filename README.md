@@ -14,6 +14,64 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `npm run start:lan`
+
+Runs the app on your local network so other devices on the same Wi-Fi can open it.\
+For example, if your PC IP is `10.171.199.220`, open this URL on your phone:
+
+`http://10.171.199.220:3005`
+
+Then create a QR code for that address and scan it from your phone. Use any free QR generator, for example:
+
+`https://api.qrserver.com/v1/create-qr-code/?data=http://10.171.199.220:3005&size=300x300`
+
+Make sure your phone and PC are on the same network and that port `3005` is not blocked by your firewall.
+
+## Public deployment
+
+To make the menu available anywhere, deploy the app to a public static host.
+
+### GitHub Pages
+
+1. Create a GitHub repository and push this project.
+2. Add your repo URL under `homepage` in `package.json` as:
+
+```json
+"homepage": "https://<your-github-username>.github.io/<repo-name>"
+```
+
+3. Run:
+
+```bash
+npm install
+npm run deploy
+```
+
+4. Your app will be published at the `homepage` URL.
+
+### Netlify
+
+1. Sign up at https://app.netlify.com/ and connect your GitHub repository.
+2. Set the build command to:
+
+```bash
+npm run build
+```
+
+3. Set the publish directory to:
+
+```bash
+build
+```
+
+The app will then be available at a public Netlify URL, and you can use that URL for a QR code.
+
+### Why this is best
+
+- `npm run start:lan` is only for local testing.
+- A public host makes the QR work anywhere, not just on your Wi-Fi.
+- Netlify and GitHub Pages both support React apps with client-side routing.
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

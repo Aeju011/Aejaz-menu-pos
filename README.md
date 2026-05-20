@@ -27,6 +27,14 @@ Then create a QR code for that address and scan it from your phone. Use any free
 
 Make sure your phone and PC are on the same network and that port `3005` is not blocked by your firewall.
 
+### QR shortcut for deployed app
+
+If your app is deployed to GitHub Pages at `https://Aeju011.github.io/Aejaz-menu-pos`, the QR image link is:
+
+`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2FAeju011.github.io%2FAejaz-menu-pos`
+
+Use that link to print or share the menu QR directly, or open the app and tap the “Print QR” button for a poster-ready version.
+
 ## Public deployment
 
 To make the menu available anywhere, deploy the app to a public static host.

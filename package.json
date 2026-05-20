@@ -16,6 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "start:lan": "set HOST=0.0.0.0&& set PORT=3005&& react-scripts start",
+    "start:backend": "cd backend && npm start",
+    "start:all": "concurrently \"npm run start:backend\" \"npm start\"",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -23,6 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "gh-pages": "^5.0.0"
   },
   "eslintConfig": {
